@@ -31,7 +31,8 @@ class Person:
 
     def is_human(self) -> bool:
         """Function to know if a person is human or not"""
-        if "human" in self.__species:
+        # We make sure that the list is in lowercase to avoid formatting issues
+        if "human" in list(map(lambda s: s.lower(), self.__species)):
             return True
         return False
 
